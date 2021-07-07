@@ -1,9 +1,21 @@
-# Fabric Example Mod
+# NEOPI
+*NotEnoughOPItems*
 
-## Setup
+Basically Avaritia for fabric (but worse).
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Please, for the love of god, if putting this in your
+modpack ever even crosses your mind, do yourself a favour
+and edit the recipes.
 
-## License
+## FAQ
+Q: What / How can I contribute?  
+A: Textures, bug reports, ideas, PRs, whatever crosses your
+mind. (TBH I don't even know why you'd like to. It'd be
+a good learning experience, maybe?.)
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Q: The whole "Atomic X" thing is stupid.  
+A: I know, it is supposed to be ironic since the mod
+itself is also stupid.
+
+Q: Why?  
+A: Because.

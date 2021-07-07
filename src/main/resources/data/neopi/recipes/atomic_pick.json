@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "AAA",
+    " S",
+    " S"
+  ],
+  "key": {
+    "A": {
+      "item": "neopi:atom"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "neopi:atomic_pick"
+  }
+}

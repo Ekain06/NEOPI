@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "A A",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "neopi:atom"
+    }
+  },
+  "result": {
+    "item": "neopi:atomic_boots"
+  }
+}

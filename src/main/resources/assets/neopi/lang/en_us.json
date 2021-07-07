@@ -1,0 +1,16 @@
+{
+  "item.neopi.atom": "Atom",
+
+  "item.neopi.atomic_sword": "Atomic Sword",
+  "item.neopi.atomic_axe": "Atomic Axe",
+  "item.neopi.atomic_shovel": "Atomic Shovel",
+  "item.neopi.atomic_pick": "Atomic Pickaxe",
+
+  "item.neopi.atomic_helmet": "Atomic Helmet",
+  "item.neopi.atomic_chestplate": "Atomic Chestplate",
+  "item.neopi.atomic_pants": "Atomic Leggings",
+  "item.neopi.atomic_boots": "Atomic Boots",
+
+
+  "itemGroup.neopi.item_group": "NEOPI"
+}
