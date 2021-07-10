@@ -12,7 +12,7 @@ public class AtomItem extends Item {
     }
 
     public static final AtomItem ITEM = new AtomItem(new FabricItemSettings()
-            .maxCount(256)  // Cool gimmick I guess?
+            //.maxCount(256)  // Cool gimmick I guess?  // Doesn't work like expected.
             .rarity(Rarity.RARE)
             .group(Mod.ITEM_GROUP)
     );
