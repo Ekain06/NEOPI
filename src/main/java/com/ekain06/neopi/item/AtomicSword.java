@@ -25,7 +25,7 @@ public class AtomicSword extends SwordItem {
 
         var targetType = target.getType();
 
-        // TODO less if else (optimize)
+        // DONE less if else (optimize) -- not worth it since it's only 4 statements
         if (EntityType.ZOMBIE.equals(targetType))
             target.dropItem(Items.ZOMBIE_HEAD);
         else if (EntityType.SKELETON.equals(targetType))

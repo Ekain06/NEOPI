@@ -33,8 +33,8 @@ public abstract class AtomicArmorTick {
         ItemStack legs = this.getEquippedStack(EquipmentSlot.LEGS);
         ItemStack feet = this.getEquippedStack(EquipmentSlot.FEET);
 
-        // TODO is it better if this is an int?
-        byte armorPieces = 0;
+        // DONE is it better if this is an int?  -- most certainly for performance, but adds an extra 24 bytes for each player. Worth it IMHO.
+        int armorPieces = 0;
 
         if (head.isOf(AtomicArmorItems.Helmet.ITEM)) {
             addStatusEffect(this, StatusEffects.WATER_BREATHING, 0);
