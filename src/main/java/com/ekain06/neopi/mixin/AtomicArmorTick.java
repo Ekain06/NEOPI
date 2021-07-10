@@ -18,9 +18,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PlayerEntity.class)
 public abstract class AtomicArmorTick {
     private static final int STATUS_EFFECT_DURATION = 10;
+    private static final int NIGHT_VISION_DURATION = 220;
     private static void addStatusEffect(AtomicArmorTick aat, StatusEffect se, int amplifier) {
         ((LivingEntityInvoker) aat).callAddStatusEffect(
                 new StatusEffectInstance(se, STATUS_EFFECT_DURATION, amplifier, false, false, false));
+    }
+    private static void addStatusEffect(AtomicArmorTick aat, StatusEffect se, int amplifier, int duration) {
+        ((LivingEntityInvoker) aat).callAddStatusEffect(
+                new StatusEffectInstance(se, duration, amplifier, false, false, false));
     }
 
     @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
@@ -40,7 +45,7 @@ public abstract class AtomicArmorTick {
 
             if (head.isOf(AtomicArmorItems.Helmet.ITEM)) {
                 addStatusEffect(this, StatusEffects.WATER_BREATHING, 0);
-                addStatusEffect(this, StatusEffects.NIGHT_VISION, 0);
+                addStatusEffect(this, StatusEffects.NIGHT_VISION, 0, NIGHT_VISION_DURATION);
                 addStatusEffect(this, StatusEffects.DOLPHINS_GRACE, 0);
                 armorPieces++;
             }
