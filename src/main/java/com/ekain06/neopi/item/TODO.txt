@@ -1,0 +1,1 @@
+TODO all of the Atomic* tools are almost a copy paste; figure out a way of removing all of that repeated code.
