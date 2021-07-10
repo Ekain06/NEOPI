@@ -1,4 +1,4 @@
-package com.ekain06.neopi;
+package com.ekain06.neopi.item;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;

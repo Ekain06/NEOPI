@@ -1,5 +1,6 @@
 package com.ekain06.neopi;
 
+import com.ekain06.neopi.item.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

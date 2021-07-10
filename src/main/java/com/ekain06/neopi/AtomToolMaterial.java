@@ -1,5 +1,6 @@
 package com.ekain06.neopi;
 
+import com.ekain06.neopi.item.AtomItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 

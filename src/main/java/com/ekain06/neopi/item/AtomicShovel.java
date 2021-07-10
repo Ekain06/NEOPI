@@ -1,11 +1,12 @@
-package com.ekain06.neopi;
+package com.ekain06.neopi.item;
 
+import com.ekain06.neopi.AtomToolMaterial;
+import com.ekain06.neopi.Mod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;

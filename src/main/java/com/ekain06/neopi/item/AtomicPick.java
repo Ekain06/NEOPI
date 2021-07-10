@@ -1,5 +1,7 @@
-package com.ekain06.neopi;
+package com.ekain06.neopi.item;
 
+import com.ekain06.neopi.AtomToolMaterial;
+import com.ekain06.neopi.Mod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
@@ -8,17 +10,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.NotNull;
 
-public class AtomicAxe extends AxeItem {
-    public AtomicAxe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
+public class AtomicPick extends PickaxeItem {
+    public AtomicPick(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
 
     @Override
-    public boolean postHit(ItemStack stack, @NotNull LivingEntity target, LivingEntity attacker) {
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         // Purposely skips durability decrease
-        target.kill();
         return true;
     }
 
@@ -28,7 +28,7 @@ public class AtomicAxe extends AxeItem {
         return true;
     }
 
-    public static final AtomicAxe ITEM = new AtomicAxe(AtomToolMaterial.MATERIAL, 0, -3.2F,
+    public static final AtomicPick ITEM = new AtomicPick(AtomToolMaterial.MATERIAL, 10, -2.8F,  // TODO review these values
             new FabricItemSettings().group(Mod.ITEM_GROUP).rarity(Rarity.RARE));
-    public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_axe");
+    public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_pick");
 }

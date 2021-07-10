@@ -1,10 +1,10 @@
-package com.ekain06.neopi;
+package com.ekain06.neopi.item;
 
+import com.ekain06.neopi.Mod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.registry.Registry;
 
 public class AtomItem extends Item {
     public AtomItem(Settings settings) {

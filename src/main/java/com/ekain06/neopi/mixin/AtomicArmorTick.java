@@ -1,6 +1,6 @@
 package com.ekain06.neopi.mixin;
 
-import com.ekain06.neopi.AtomicArmorItems;
+import com.ekain06.neopi.item.AtomicArmorItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;

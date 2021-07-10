@@ -1,5 +1,6 @@
 package com.ekain06.neopi;
 
+import com.ekain06.neopi.item.AtomItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
