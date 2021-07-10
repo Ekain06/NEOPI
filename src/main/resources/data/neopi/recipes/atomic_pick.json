@@ -2,8 +2,8 @@
   "type": "crafting_shaped",
   "pattern": [
     "AAA",
-    " S",
-    " S"
+    " S ",
+    " S "
   ],
   "key": {
     "A": {
