@@ -6,6 +6,7 @@
   "mixins": [
     "AtomicArmorTick",
     "EntityInvoker",
+    "EntityAccessor",
     "LivingEntityInvoker"
   ],
   "client": [
