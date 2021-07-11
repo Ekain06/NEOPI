@@ -24,3 +24,7 @@ A: Because.
 Just as any other mod, run ./gradlew build. You'll find
 the artifacts in build/libs/. Choose the shortest named
 one.
+
+If you don't want to compile the mod for yourself, you
+can grab the latest artifacts from github actions. Beware
+that these may be unstable and/or not work.
