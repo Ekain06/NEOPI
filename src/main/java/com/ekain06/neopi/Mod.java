@@ -25,13 +25,14 @@ public class Mod implements ModInitializer {
         LOGGER.info("Initializing NEOPI");
         // TODO there must be a better way of doing this
         Registry.register(Registry.ITEM, AtomItem.IDENTIFIER, AtomItem.ITEM);
-        Registry.register(Registry.ITEM, AtomicSword.IDENTIFIER, AtomicSword.ITEM);
-        Registry.register(Registry.ITEM, AtomicPick.IDENTIFIER, AtomicPick.ITEM);
         Registry.register(Registry.ITEM, AtomicAxe.IDENTIFIER, AtomicAxe.ITEM);
+        Registry.register(Registry.ITEM, AtomicPick.IDENTIFIER, AtomicPick.ITEM);
         Registry.register(Registry.ITEM, AtomicShovel.IDENTIFIER, AtomicShovel.ITEM);
-        Registry.register(Registry.ITEM, AtomicArmorItems.Helmet.IDENTIFIER, AtomicArmorItems.Helmet.ITEM);
-        Registry.register(Registry.ITEM, AtomicArmorItems.Chestplate.IDENTIFIER, AtomicArmorItems.Chestplate.ITEM);
-        Registry.register(Registry.ITEM, AtomicArmorItems.Leggings.IDENTIFIER, AtomicArmorItems.Leggings.ITEM);
+        Registry.register(Registry.ITEM, AtomicSword.IDENTIFIER, AtomicSword.ITEM);
+        Registry.register(Registry.ITEM, AtomicHoe.IDENTIFIER, AtomicHoe.ITEM);
         Registry.register(Registry.ITEM, AtomicArmorItems.Boots.IDENTIFIER, AtomicArmorItems.Boots.ITEM);
+        Registry.register(Registry.ITEM, AtomicArmorItems.Leggings.IDENTIFIER, AtomicArmorItems.Leggings.ITEM);
+        Registry.register(Registry.ITEM, AtomicArmorItems.Chestplate.IDENTIFIER, AtomicArmorItems.Chestplate.ITEM);
+        Registry.register(Registry.ITEM, AtomicArmorItems.Helmet.IDENTIFIER, AtomicArmorItems.Helmet.ITEM);
     }
 }
