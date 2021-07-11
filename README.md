@@ -19,3 +19,8 @@ itself is also stupid.
 
 Q: Why?  
 A: Because.
+
+## Compiling
+Just as any other mod, run ./gradlew build. You'll find
+the artifacts in build/libs/. Choose the shortest named
+one.
