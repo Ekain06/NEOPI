@@ -46,7 +46,7 @@ public class AtomicSword extends SwordItem {
     }
 
     public static final AtomicSword ITEM = new AtomicSword(AtomToolMaterial.MATERIAL, 0, -0.1F,
-            new FabricItemSettings().group(Mod.ITEM_GROUP).rarity(Rarity.RARE));
+            AtomToolMaterial.DEFAULT_SETTINGS);
     public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_sword");
 
 }

@@ -31,6 +31,6 @@ public class AtomicAxe extends AxeItem {
     }
 
     public static final AtomicAxe ITEM = new AtomicAxe(AtomToolMaterial.MATERIAL, 0, -3.2F,
-            new FabricItemSettings().group(Mod.ITEM_GROUP).rarity(Rarity.RARE));
+            AtomToolMaterial.DEFAULT_SETTINGS);
     public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_axe");
 }

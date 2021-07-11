@@ -32,6 +32,6 @@ public class AtomicShovel extends ShovelItem {
     }
 
     public static final AtomicShovel ITEM = new AtomicShovel(AtomToolMaterial.MATERIAL, 1.5F, -3.0F,
-            new FabricItemSettings().group(Mod.ITEM_GROUP).rarity(Rarity.RARE));
+            AtomToolMaterial.DEFAULT_SETTINGS);
     public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_shovel");
 }

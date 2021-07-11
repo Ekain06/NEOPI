@@ -29,6 +29,6 @@ public class AtomicPick extends PickaxeItem {
     }
 
     public static final AtomicPick ITEM = new AtomicPick(AtomToolMaterial.MATERIAL, 10, -2.8F,  // TODO review these values
-            new FabricItemSettings().group(Mod.ITEM_GROUP).rarity(Rarity.RARE));
+            AtomToolMaterial.DEFAULT_SETTINGS);
     public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_pick");
 }
