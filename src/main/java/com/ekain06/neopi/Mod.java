@@ -23,7 +23,7 @@ public class Mod implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Initializing NEOPI");
-        // There must be a better way of doing this
+        // TODO there must be a better way of doing this
         Registry.register(Registry.ITEM, AtomItem.IDENTIFIER, AtomItem.ITEM);
         Registry.register(Registry.ITEM, AtomicSword.IDENTIFIER, AtomicSword.ITEM);
         Registry.register(Registry.ITEM, AtomicPick.IDENTIFIER, AtomicPick.ITEM);
