@@ -23,9 +23,9 @@ public abstract class AtomicArmorTick {
         ((LivingEntityInvoker) aat).callAddStatusEffect(
                 new StatusEffectInstance(se, STATUS_EFFECT_DURATION, amplifier, false, false, false));
     }
-    private static void addStatusEffect(AtomicArmorTick aat, StatusEffect se, int amplifier, int duration) {
+    private static void addNightVision(AtomicArmorTick aat) {
         ((LivingEntityInvoker) aat).callAddStatusEffect(
-                new StatusEffectInstance(se, duration, amplifier, false, false, false));
+                new StatusEffectInstance(StatusEffects.NIGHT_VISION, NIGHT_VISION_DURATION, 0, false, false, false));
     }
 
     @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
@@ -45,7 +45,7 @@ public abstract class AtomicArmorTick {
 
             if (head.isOf(AtomicArmorItems.Helmet.ITEM)) {
                 addStatusEffect(this, StatusEffects.WATER_BREATHING, 0);
-                addStatusEffect(this, StatusEffects.NIGHT_VISION, 0, NIGHT_VISION_DURATION);
+                addNightVision(this);
                 addStatusEffect(this, StatusEffects.DOLPHINS_GRACE, 0);
                 armorPieces++;
             }
