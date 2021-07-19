@@ -7,9 +7,10 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -30,7 +31,15 @@ public class AtomicHoe extends HoeItem {
         return true;
     }
 
-    public static final AtomicHoe ITEM = new AtomicHoe(AtomToolMaterial.MATERIAL, 7, -3.2F,
+    @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
+        var ret = super.useOnBlock(context);
+        var item = context.getStack();
+        item.setDamage(-item.getMaxDamage());
+        return ret;
+    }
+
+    public static final AtomicHoe ITEM = new AtomicHoe(AtomToolMaterial.MATERIAL, -7, 0.0F,
             AtomToolMaterial.DEFAULT_SETTINGS);
-    public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_pick");
+    public static final Identifier IDENTIFIER = new Identifier(Mod.IDENTIFIER, "atomic_hoe");
 }
