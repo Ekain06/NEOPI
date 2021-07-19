@@ -31,52 +31,52 @@ public abstract class AtomicArmorTick {
     @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
     @Shadow @Final private PlayerAbilities abilities;
 
+    @Shadow public abstract boolean isCreative();
+
     @Inject(at = @At("TAIL"), method = "tick()V")
     private void tick(CallbackInfo ci) {
-        if (!((EntityAccessor) this).getWorld().isClient) {
-            // TODO optimize
-            ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
-            ItemStack chest = this.getEquippedStack(EquipmentSlot.CHEST);
-            ItemStack legs = this.getEquippedStack(EquipmentSlot.LEGS);
-            ItemStack feet = this.getEquippedStack(EquipmentSlot.FEET);
+        // TODO optimize
+        ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
+        ItemStack chest = this.getEquippedStack(EquipmentSlot.CHEST);
+        ItemStack legs = this.getEquippedStack(EquipmentSlot.LEGS);
+        ItemStack feet = this.getEquippedStack(EquipmentSlot.FEET);
 
-            // DONE is it better if this is an int?  -- most certainly for performance, but adds an extra 24 bytes for each player. Worth it IMHO.
-            int armorPieces = 0;
+        // DONE is it better if this is an int?  -- most certainly for performance, but adds an extra 24 bytes for each player. Worth it IMHO.
+        int armorPieces = 0;
 
-            if (head.isOf(AtomicArmorItems.Helmet.ITEM)) {
-                addStatusEffect(this, StatusEffects.WATER_BREATHING, 0);
-                addNightVision(this);
-                addStatusEffect(this, StatusEffects.DOLPHINS_GRACE, 0);
-                armorPieces++;
-            }
+        if (head.isOf(AtomicArmorItems.Helmet.ITEM)) {
+            addStatusEffect(this, StatusEffects.WATER_BREATHING, 0);
+            addNightVision(this);
+            addStatusEffect(this, StatusEffects.DOLPHINS_GRACE, 0);
+            armorPieces++;
+        }
 
-            if (chest.isOf(AtomicArmorItems.Chestplate.ITEM)) {
-                this.abilities.allowFlying = true;
-                armorPieces++;
-            } else if (this.abilities.allowFlying) {
-                this.abilities.allowFlying = false;
-            }
+        if (chest.isOf(AtomicArmorItems.Chestplate.ITEM)) {
+            this.abilities.allowFlying = true;
+            armorPieces++;
+        } else if (this.abilities.allowFlying && !this.isCreative()) {
+            this.abilities.allowFlying = false;
+        }
 
-            if (legs.isOf(AtomicArmorItems.Leggings.ITEM)) {
-                this.abilities.invulnerable = true;
-                armorPieces++;
-            } else if (this.abilities.invulnerable) {
-                this.abilities.invulnerable = false;
-            }
+        if (legs.isOf(AtomicArmorItems.Leggings.ITEM)) {
+            this.abilities.invulnerable = true;
+            armorPieces++;
+        } else if (this.abilities.invulnerable && !this.isCreative()) {
+            this.abilities.invulnerable = false;
+        }
 
-            if (feet.isOf(AtomicArmorItems.Boots.ITEM)) {
-                addStatusEffect(this, StatusEffects.SPEED, 5);  // this way we don't need to worry about "unsetting" the speed
-                addStatusEffect(this, StatusEffects.JUMP_BOOST, 2);
-                armorPieces++;
-            }
+        if (feet.isOf(AtomicArmorItems.Boots.ITEM)) {
+            addStatusEffect(this, StatusEffects.SPEED, 5);  // this way we don't need to worry about "unsetting" the speed
+            addStatusEffect(this, StatusEffects.JUMP_BOOST, 2);
+            armorPieces++;
+        }
 
-            if (armorPieces == 4) {  // aka full set's effects
-                addStatusEffect(this, StatusEffects.REGENERATION, 999);
-                // VVV these aren't needed since you're invulnerable anyways
-                //addStatusEffect(this, StatusEffects.ABSORPTION, 2);
-                //addStatusEffect(this, StatusEffects.HEALTH_BOOST, 5);  // useless since user is invulnerable
-                addStatusEffect(this, StatusEffects.SATURATION, 999);
-            }
+        if (armorPieces == 4) {  // aka full set's effects
+            addStatusEffect(this, StatusEffects.REGENERATION, 999);
+            // VVV these aren't needed since you're invulnerable anyways
+            //addStatusEffect(this, StatusEffects.ABSORPTION, 2);
+            //addStatusEffect(this, StatusEffects.HEALTH_BOOST, 5);  // useless since user is invulnerable
+            addStatusEffect(this, StatusEffects.SATURATION, 999);
         }
     }
 }
