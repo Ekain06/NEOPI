@@ -10,8 +10,7 @@ and edit the recipes.
 ## FAQ
 Q: What / How can I contribute?  
 A: Textures, bug reports, ideas, PRs, whatever crosses your
-mind. (TBH I don't even know why you'd like to. It'd be
-a good learning experience, maybe?.)
+mind. Any contribution is greatly appreciated.
 
 Q: The whole "Atomic X" thing is stupid.  
 A: I know, it is supposed to be ironic since the mod
